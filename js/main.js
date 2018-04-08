@@ -26,8 +26,6 @@ function setup() {
       color: "#fff",
       lines: {
         lineWidth: 1
-        // fill: true,
-        // fillColor: "#fff"
       }
     },
     yaxis: {
