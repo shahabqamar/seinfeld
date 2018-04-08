@@ -2,11 +2,13 @@
 
 ![Its not a lie!](https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif)
 
-Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither 😵. Which is why I built the Seinfeld simulator.
+Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither. Which is why I built the Seinfeld simulator.
 
 ## How does it work?
 
 Seinfeld Simulator is built on top of a variety of browser API's and 3rd party JS libraries to analyse audio and video from your computer's microphone and webcam respectively. Sensitivity to motion and audio input can be adjusted using range selectors to suit your specific environment and situation. The project is highly experimental and therefore only supported by Google Chrome.
+
+![Simulator screenshot](https://shahabqamar.github.io/seinfeld/images/screenshot.png)
 
 ## Resources
 
