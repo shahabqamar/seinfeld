@@ -12,6 +12,42 @@ var data = [],
 
 var colorPalette = ["#fbd53c", "#00b3c8", "#fff", "#ff0000"];
 
+var audioFiles = [
+  "audio/intro-1.mp3",
+  "audio/intro-2.mp3",
+  "audio/intro-3.mp3",
+  "audio/laugh-1.mp3",
+  "audio/laugh-2.mp3",
+  "audio/laugh-3.mp3",
+  "audio/laugh-4.mp3",
+  "audio/laugh-5.mp3",
+  "audio/laugh-6.mp3",
+  "audio/laugh-7.mp3"
+];
+
+function preloadAudio(url) {
+  var audio = new Audio();
+  // once this file loads, it will call loadedAudio()
+  // the file will be kept by the browser as cache
+  audio.addEventListener("canplaythrough", loadedAudio, false);
+  audio.src = url;
+}
+
+var loaded = 0;
+function loadedAudio() {
+  // this will be called every time an audio file is loaded
+  // we keep track of the loaded files vs the requested files
+  loaded++;
+  if (loaded == audioFiles.length) {
+    console.log("all files loaded");
+  }
+}
+
+// we start preloading all the audio files
+for (var i in audioFiles) {
+  preloadAudio(audioFiles[i]);
+}
+
 function setup() {
   fft = new p5.FFT();
   mic = new p5.AudioIn();
