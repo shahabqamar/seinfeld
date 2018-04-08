@@ -10,7 +10,7 @@ The simulator uses computer's webcam and microphone to detect motion and audio. 
 
 Seinfeld Simulator is built on top of a variety of browser API's and 3rd party JS libraries to analyse audio and video from your computer's microphone and webcam respectively (see Resources for component JS libraries). Sensitivity to motion and audio input can be adjusted using range selectors to suit your specific environment.
 
-_Please note that this project is highly experimental and therefore only supported by Google Chrome._
+_Please note that this project is highly experimental and therefore only supported by Google Chrome desktop._
 
 ![Simulator screenshot ](https://shahabqamar.github.io/seinfeld/images/screenshot.png)
 
