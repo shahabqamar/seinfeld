@@ -15,6 +15,7 @@ Below is a list of JS libraries and resources that were used to create this proj
 * [Diffcam](http://diffcam.com/)
 * [p5.js](https://p5js.org/)
 * [jQuery UI Slider Pips](https://github.com/simeydotme/jQuery-ui-Slider-Pips)
+* [Flot Charts](http://www.flotcharts.org/)
 * [Tympanus: Creative Audio Visualizers](https://tympanus.net/codrops/2018/03/06/creative-audio-visualizers/)
 
 ## [Live Demo](https://shahabqamar.github.io/seinfeld)
