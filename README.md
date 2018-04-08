@@ -1,6 +1,10 @@
 # Seinfeld Simulator
 
+<div style="float:right; margin-left:1rem; margin-bottom: 1rem;">
+
 ![Its not a lie!](https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif)
+
+</div>
 
 Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither. Which is why I built the Seinfeld simulator.
 
@@ -12,9 +16,8 @@ Seinfeld Simulator is built on top of a variety of browser API's and 3rd party J
 
 _Please note that this project is highly experimental and therefore only supported by Google Chrome._
 
-<div style="float:right;">
 ![Simulator screenshot ](https://shahabqamar.github.io/seinfeld/images/screenshot.png)
-</div>
+
 ## Resources
 
 Below is a list of JS libraries and resources that were used to create this project
