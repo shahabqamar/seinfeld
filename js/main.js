@@ -30,7 +30,11 @@ var audioFiles = [
   "audio/laugh-4.mp3",
   "audio/laugh-5.mp3",
   "audio/laugh-6.mp3",
-  "audio/laugh-7.mp3"
+  "audio/laugh-7.mp3",
+  "audio/laugh-8.mp3",
+  "audio/laugh-9.mp3",
+  "audio/laugh-10.mp3",
+  "audio/laugh-11.mp3"
 ];
 
 function preloadAudio(url) {
@@ -232,7 +236,7 @@ function laughTrackHander() {
   //if trigger true; wait until dialogue is finished and then play laugh track
   if (audio.paused && vol < 2 && laughTrigger === true && laughOn === true) {
     laughTrigger = false;
-    audio = new Audio("audio/laugh-" + getRandomInt(1, 7) + ".mp3");
+    audio = new Audio("audio/laugh-" + getRandomInt(1, 11) + ".mp3");
     audio.play();
   }
 }
