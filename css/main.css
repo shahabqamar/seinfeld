@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  max-width: 50%;
+  top: 20%;
+  left: 25%;
+}
+
+.sitcom {
+  color: #2376a5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #333;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Top Navigation Style */
+.links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.content {
+  padding: 3em 0;
+}
+
+.content.main {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.canvas-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#webglcanvas,
+#defaultCanvas0 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.p5_loading {
+  background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.p5_loading__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+}
+
+.p5_loading__inner span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: rgb(255, 255, 255);
+  margin: 0 20px;
+  transform-origin: center;
+  animation: noiseLoad 0.5s infinite ease-in-out alternate;
+}
+
+.p5_loading__inner span:nth-child(2) {
+  animation-delay: 0.33s;
+}
+
+.p5_loading__inner span:nth-child(3) {
+  animation-delay: 0.66s;
+}
+
+@keyframes noiseLoad {
+  from {
+    transform: scale(0);
+    background: rgb(255, 255, 255);
+  }
+
+  to {
+    transform: scale(1);
+    background: rgb(0, 0, 0);
+  }
+}
+
+#uploading-animation {
+  display: none;
+}
+
+#uploading-animation.is-visible {
+  display: block;
+}
+
+/** 
+* Video
+**/
+
+.debugPreview {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  margin-left: 12px;
+}
+
+.debugVideo {
+  display: flex;
+  margin-left: 12px;
+  position: relative;
+}
+
+.debugVideo::before,
+.debugAudio::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: Red;
+  z-index: 1;
+  left: -16px;
+  top: -30px;
+}
+
+.debugVideo::before {
+  background: url(../images/icon-eye.svg) no-repeat;
+}
+
+.debugAudio::before {
+  background: url(../images/icon-ear.svg) no-repeat;
+  left: -5px;
+}
+
+#videoPreview {
+  height: 100px;
+}
+
+#motionPreview {
+  position: relative;
+  height: 100px;
+  width: auto;
+  margin-left: 22px;
+}
+
+#videoMotionPlot {
+  width: 122px;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.2em;
+  margin-left: 22px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.videoMotionControl {
+  position: absolute;
+  margin-left: -12px;
+}
+
+.motionThresholdLevel,
+.audioThresholdLevel {
+  height: 1px;
+  width: 167px;
+  background: #fff;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.debugAudio {
+  position: relative;
+  margin-right: 23px;
+}
+
+.audioRangeWrapper {
+  position: absolute;
+}
+
+#audioMotionPlot {
+  margin-left: 34px;
+  background: rgba(237, 37, 48, 1);
+}
