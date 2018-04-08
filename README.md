@@ -2,7 +2,7 @@
 
 ![Its not a lie!](https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif)
 
-Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither. Which is why I built the Seinfeld simulator.
+Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither 😵. Which is why I built the Seinfeld simulator.
 
 ## How does it work?
 
