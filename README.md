@@ -17,4 +17,4 @@ Below is a list of JS libraries and resources that were used to create this proj
 * [jQuery UI Slider Pips](https://github.com/simeydotme/jQuery-ui-Slider-Pips)
 * [Tympanus: Creative Audio Visualizers](https://tympanus.net/codrops/2018/03/06/creative-audio-visualizers/)
 
-## [Live Demo](https://github.com/shahabqamar/seinfeld)
+## [Live Demo](https://shahabqamar.github.io/seinfeld)
