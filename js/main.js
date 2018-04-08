@@ -6,7 +6,15 @@ var pieces, radius, fft, mapMouseX, mapMouseY, mic;
 var audioScoreMax = 100;
 var audioPlot;
 var updateInterval = 30;
+var videoTriggerThreshold = 500;
 var audioTriggerThreshold = 50;
+var audio = new Audio("audio/intro-" + getRandomInt(1, 3) + ".mp3");
+var mediaStreamSource = null;
+var laughOn = true;
+var introOn = true;
+var laughTrigger = false;
+
+var audioContext = null;
 var data = [],
   totalPoints = 300;
 
@@ -46,6 +54,14 @@ function loadedAudio() {
 // we start preloading all the audio files
 for (var i in audioFiles) {
   preloadAudio(audioFiles[i]);
+}
+
+/**
+ * Utility Functions
+ */
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function setup() {
@@ -198,11 +214,30 @@ function draw() {
     pop();
   }
 
-  laughTrackHander();
+  //throttle laugh track handler
+  setTimeout(function() {
+    laughTrackHander();
+  }, 450);
+
+  //laughTrackHander();
 }
 
 function laughTrackHander() {
   vol = mic.getLevel() * 1000;
+
+  console.log(vol);
+  //audio spike detected; set trigger
+  if (audio.paused && vol > audioTriggerThreshold && laughTrigger === false) {
+    laughTrigger = true;
+  }
+
+  //if trigger true; wait until dialogue is finished and then play laugh track
+  if (audio.paused && vol < 2 && laughTrigger === true && laughOn === true) {
+    laughTrigger = false;
+    console.log("will play now");
+    audio = new Audio("audio/laugh-" + getRandomInt(1, 7) + ".mp3");
+    audio.play();
+  }
 }
 
 function windowResized() {
@@ -220,7 +255,6 @@ var initVideoDetection = function() {
   //var videoPreview = document.getElementById("videoPreview");
   var motionScore = 0;
   var motionScoreMax = 1000;
-  var videoTriggerThreshold = 500;
 
   function initDiffcamSuccess() {
     DiffCamEngine.start();
@@ -234,14 +268,11 @@ var initVideoDetection = function() {
 
   function captureVideo(payload) {
     motionScore = payload.score;
-    // score.textContent = payload.score;
-    // if (payload.score >= videoTriggerThreshold) {
-    //   console.log("triggered!" + payload.score);
-    //   if (audio.paused && introOn) {
-    //     audio = new Audio("audio/intro-" + getRandomInt(1, 3) + ".mp3");
-    //     audio.play();
-    //   }
-    // }
+    //console.log("triggerd", motionScore);
+    if (audio.paused && introOn && motionScore >= videoTriggerThreshold) {
+      audio = new Audio("audio/intro-" + getRandomInt(1, 3) + ".mp3");
+      audio.play();
+    }
   }
 
   DiffCamEngine.init({
@@ -336,9 +367,6 @@ var initVideoDetection = function() {
       orientation: "vertical",
       change: function(event, ui) {
         videoTriggerThreshold = ui.value;
-        console.log(
-          "videoTriggerThreshold changed to " + videoTriggerThreshold
-        );
         $(".motionThresholdLevel").css("top", 100 - ui.value / 10);
       }
     })
