@@ -45,6 +45,11 @@ body {
   color: #2376a5;
 }
 
+.credits {
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
