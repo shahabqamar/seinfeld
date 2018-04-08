@@ -46,9 +46,9 @@ function loadedAudio() {
   // this will be called every time an audio file is loaded
   // we keep track of the loaded files vs the requested files
   loaded++;
-  if (loaded == audioFiles.length) {
-    console.log("all files loaded");
-  }
+  // if (loaded == audioFiles.length) {
+  //   console.log("all files loaded");
+  // }
 }
 
 // we start preloading all the audio files
@@ -107,7 +107,6 @@ function setup() {
       orientation: "vertical",
       change: function(event, ui) {
         audioTriggerThreshold = ui.value;
-        console.log("AUDIO THRESHOLD LEVEL CHANGED", ui.value);
         $(".audioThresholdLevel").css("top", 100 - ui.value);
       }
     })
@@ -225,7 +224,6 @@ function draw() {
 function laughTrackHander() {
   vol = mic.getLevel() * 1000;
 
-  console.log(vol);
   //audio spike detected; set trigger
   if (audio.paused && vol > audioTriggerThreshold && laughTrigger === false) {
     laughTrigger = true;
@@ -234,7 +232,6 @@ function laughTrackHander() {
   //if trigger true; wait until dialogue is finished and then play laugh track
   if (audio.paused && vol < 2 && laughTrigger === true && laughOn === true) {
     laughTrigger = false;
-    console.log("will play now");
     audio = new Audio("audio/laugh-" + getRandomInt(1, 7) + ".mp3");
     audio.play();
   }
@@ -268,7 +265,6 @@ var initVideoDetection = function() {
 
   function captureVideo(payload) {
     motionScore = payload.score;
-    //console.log("triggerd", motionScore);
     if (audio.paused && introOn && motionScore >= videoTriggerThreshold) {
       audio = new Audio("audio/intro-" + getRandomInt(1, 3) + ".mp3");
       audio.play();
