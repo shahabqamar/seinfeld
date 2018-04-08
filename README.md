@@ -4,7 +4,7 @@ Do you ever wish your life was like an episode of Seinfeld? Where you'd walk int
 
 ![Its not a lie!](https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif)
 
-The simulator uses computer's webcam and micrphone to detect motion and audio. It plays a variety of popular Seinfeld basslines when the webcam detects motion and a laugh track when it detects end of dialogue.
+The simulator uses computer's webcam and microphone to detect motion and audio. It plays a variety of popular Seinfeld basslines when the webcam detects motion and a laugh track when it detects end of dialogue.
 
 ## How does it work?
 
