@@ -1,10 +1,8 @@
 # Seinfeld Simulator
 
-<div style="float:right; margin-left:1rem; margin-bottom: 1rem;">
-<img src="https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif" alt="its not a lie!" />
-</div>
-
 Do you ever wish your life was like an episode of Seinfeld? Where you'd walk into a room to the bass lines of Seinfeld intro theme and a laugh track to go along with your weird sense of humour? Me neither. Which is why I built the Seinfeld simulator.
+
+![Its not a lie!](https://media.giphy.com/media/j0a8Kr0uDKQec/giphy.gif)
 
 The simulator uses computer's webcam and micrphone to detect motion and audio. It plays a variety of popular Seinfeld basslines when the webcam detects motion and a laugh track when it detects end of dialogue.
 
