@@ -21,6 +21,18 @@ body {
   z-index: 1;
 }
 
+.chrome-experiment-logo {
+  position: absolute;
+  z-index: 8;
+  top: 1rem;
+  width: 150px;
+  right: 1rem;
+}
+
+.addthis_inline_share_toolbox {
+  margin-top: 0.5rem;
+}
+
 .logo {
   position: absolute;
   z-index: 1;
