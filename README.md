@@ -12,8 +12,9 @@ Seinfeld Simulator is built on top of a variety of browser API's and 3rd party J
 
 _Please note that this project is highly experimental and therefore only supported by Google Chrome._
 
+<div style="float:right;">
 ![Simulator screenshot ](https://shahabqamar.github.io/seinfeld/images/screenshot.png)
-
+</div>
 ## Resources
 
 Below is a list of JS libraries and resources that were used to create this project
